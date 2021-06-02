@@ -71,7 +71,7 @@ export default function LeagueWorks(){
                 <ProjectDesc>
                     <p style={{maxWidth:'800px'}}> 
                     BCIT Term 3 Project. LeagueWorks is an all-in-one sport league management app catered towards atheletes and sports administrators. This app took
-                    lots of reasearch and planning to develop. Tools such as Figma were used for designing the app and during the development phase, we used tools such as Visual Studio Code, Android Studio and Xcode.
+                    lots of research and planning to develop. Tools such as Figma were used for designing the app and during the development phase, we used tools such as Visual Studio Code, Android Studio and Xcode.
                     </p>
 
                     <h2>App Demo</h2>

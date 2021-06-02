@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import {motion} from 'framer-motion';
 import {useForm} from '@formspree/react';
+import Footer from "components/Footer/Footer.js";
 // reactstrap components
 import {
   Button,
@@ -44,6 +45,7 @@ export default function Contact() {
     // }
 
   return (
+    <>
     <div className="section section-signup">
       <IndexNavbar/>
 
@@ -172,5 +174,7 @@ export default function Contact() {
         </Row> */}
       </Container>
     </div>
+    {/* <Footer/> */}
+    </>
   );
 }

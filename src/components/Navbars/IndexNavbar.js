@@ -17,6 +17,7 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
 // reactstrap components
 import {
   Collapse,
@@ -33,6 +34,31 @@ import {
   Row,
   Col,
 } from "reactstrap";
+
+const LinkHover = styled(NavLink)`
+  display: inline-block;
+  position: relative;
+  color: #fff;
+
+
+&:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+&:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+`;
 
 export default function IndexNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -122,7 +148,7 @@ export default function IndexNavbar() {
                 href="https://www.linkedin.com/in/namorojustin/"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Follow us on Twitter"
+                title="Linkedin"
               >
                 <i className="fab fa-linkedin" />
                 <p className="d-lg-none d-xl-none">Linkedin</p>
@@ -134,7 +160,7 @@ export default function IndexNavbar() {
                 href="https://github.com/justinnamoro"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Like us on Facebook"
+                title="Facebook"
               >
                 <i className="fab fa-github" />
                 <p className="d-lg-none d-xl-none">Github</p>
@@ -146,17 +172,17 @@ export default function IndexNavbar() {
                 href="https://www.instagram.com/namoro.js/"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Follow us on Instagram"
+                title="Instagram"
               >
                 <i className="fab fa-instagram" />
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href='/justinnamoro_resume.pdf'>Resume</NavLink>
+              <LinkHover tag={Link} to='/About'>About</LinkHover>
             </NavItem>
             <NavItem>
-                <NavLink tag={Link} to='/Contact'>Contact</NavLink>
+                <LinkHover tag={Link} to='/Contact'>Contact</LinkHover>
             </NavItem>
             <UncontrolledDropdown nav>
               <DropdownToggle
