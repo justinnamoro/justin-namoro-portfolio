@@ -63,7 +63,7 @@ export default function About() {
       <Container>
 
           <SplitDiv>
-                <div style={{display:'flex', flexDirection:'column', alignItems: 'center',maxWidth:570, margin:20, justifyContent:'center'}}>
+                <motion.div style={{display:'flex', flexDirection:'column', alignItems: 'center',maxWidth:570, margin:20, justifyContent:'center'}} initial='out' animate='in' exit='out' variants={pageTransition}>
                     <p style={{marginBottom:25}}>I'm a recent graduate of BCIT, where I studied Digital Design and Development. 
                     I specialize in creating user-friendly websites and mobile applications. 
                     For each project, I make sure to put emphasis on excellent user experience. 
@@ -74,7 +74,7 @@ export default function About() {
                     <Button href='/justinnamoro_resume.pdf'>View Resume</Button>
 
                     
-                </div>
+                </motion.div>
 
                 <div>
                     <img src='/coding.gif'/>

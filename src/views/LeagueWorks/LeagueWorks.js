@@ -69,13 +69,16 @@ export default function LeagueWorks(){
                 </ProjectInfo>
 
                 <ProjectDesc>
-                    <p style={{maxWidth:'800px'}}> 
+                    <p style={{maxWidth:'800px', marginBottom:50}}> 
                     BCIT Term 3 Project. LeagueWorks is an all-in-one sport league management app catered towards atheletes and sports administrators. This app took
-                    lots of research and planning to develop. Tools such as Figma were used for designing the app and during the development phase, we used tools such as Visual Studio Code, Android Studio and Xcode.
+                    lots of research and planning to develop. This app was developed with React Native. Tools such as Figma were used for designing the app and during the development phase, we used tools such as Visual Studio Code, Android Studio and Xcode.
                     </p>
 
+                    <h2>UI Design</h2>
+                    <iframe style={{border:'1px solid rgba(0, 0, 0, 0.1)', borderRadius:15,marginBottom:50}} width="100%" height="700" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfA15NfYJoI2EkmPxSf19kH%2FHigh-Fidelity%3Fnode-id%3D10%253A108" allowfullscreen></iframe>
+
                     <h2>App Demo</h2>
-                    <iframe width="100%" height="700" src="https://www.youtube.com/embed/cO6DOqB6DvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style={{borderRadius:15}} width="100%" height="700" src="https://www.youtube.com/embed/cO6DOqB6DvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
                 </ProjectDesc>

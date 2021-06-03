@@ -68,13 +68,16 @@ export default function BeatShare(){
                 </ProjectInfo>
 
                 <ProjectDesc>
-                    <p style={{maxWidth:'800px'}}> 
-                    BCIT Term 4 Project. We were able to design and develop a social media app where users can share their taste in music. It took about half a month to design and a month to develop.
+                    <p style={{maxWidth:'800px', marginBottom:50}}> 
+                    BCIT Term 4 Project. We were able to design and develop a social media app where users can share their taste in music. 
+                    This app was developed using React JS. As a Front-End Developer and Project Manager, I was in charge of connecting the app to 
+                    the back-end server, adding interactivity to the app, creating and styling components, as well as conducting weekly team meetings.
+                    It took about half a month to design and a month to develop.
                     We are happy with the end results of this project!
                     </p>
 
                     <h2>App Demo</h2>
-                    <iframe width="100%" height="700" src="https://www.youtube.com/embed/T8fmZkj9FK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style={{borderRadius:15}} width="100%" height="700" src="https://www.youtube.com/embed/T8fmZkj9FK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
                 </ProjectDesc>
