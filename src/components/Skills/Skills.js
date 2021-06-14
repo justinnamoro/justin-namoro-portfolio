@@ -14,8 +14,8 @@ import {
 
 const Main = styled.div`
 background-color:${props=>props.bgcolor ? props.bgcolor : '#272a66'};
--webkit-box-shadow: 0px 11px 14px 1px rgba(0,0,0,0.51); 
-box-shadow: 0px 11px 14px 1px rgba(0,0,0,0.51);
+/* -webkit-box-shadow: 0px 11px 14px 1px rgba(0,0,0,0.51); 
+box-shadow: 0px 11px 14px 1px rgba(0,0,0,0.51); */
 width: 100%;
 height: 300px;
 border-radius: 50px;
