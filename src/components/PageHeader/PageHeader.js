@@ -34,10 +34,10 @@ export default function PageHeader() {
       <div className="squares square7" />
       <Container>
         <div className="content-center brand">
-        <img src='/me.jpeg' 
+        <img src='/me.jpg' 
           style=
-          {{width:'150px', 
-          height:'150px',
+          {{width:'185px', 
+          height:'180px',
           borderRadius:'30px',
           marginTop:'150px',
           marginBottom:'50px'
