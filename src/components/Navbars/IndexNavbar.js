@@ -189,6 +189,10 @@ export default function IndexNavbar() {
                 <DropdownItem tag={Link} to="/LeagueWorks">
                   LeagueWorks
                 </DropdownItem>
+                <DropdownItem tag={Link} to="/Visie">
+                  Visie
+                </DropdownItem>
+
 
                
                 

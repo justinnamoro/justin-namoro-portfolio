@@ -71,6 +71,7 @@ export default function Visie(){
                 <ProjectDesc>
                     <p style={{maxWidth:'800px', marginBottom:50}}> 
                     Visie is my first project with StayShure. Bubble.io was the primary tool that was used to develop this web app.
+                    Link to website: <a href='https://visie.io/'>Visie</a>
                     </p>
 
                 </ProjectDesc>
