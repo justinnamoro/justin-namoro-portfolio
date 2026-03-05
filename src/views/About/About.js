@@ -64,11 +64,9 @@ export default function About() {
 
           <SplitDiv>
                 <motion.div style={{display:'flex', flexDirection:'column', alignItems: 'center',maxWidth:570, margin:20, justifyContent:'center'}} initial='out' animate='in' exit='out' variants={pageTransition}>
-                    <p style={{marginBottom:25}}>I studied in BCIT for about 2 years. 
-                    I specialize in creating user-friendly websites and mobile applications. 
-                    For each project, I make sure to put emphasis on excellent user experience. 
-                    In my free time, you would find me at a local dance studio or simply spending time with friends.
-                    If you've read this far, I hope we could connect one day!
+                    <p style={{marginBottom:25}}>I studied Digital Design and Development at the British Columbia Institute of Technology for two years, where I built a strong foundation in front-end development, UI design, and responsive web technologies. I specialize in creating user-friendly websites and mobile applications using modern tools such as HTML, CSS, JavaScript, and React.
+
+For every project, I focus on building intuitive interfaces and seamless user experiences. I care deeply about accessibility, performance, and clean design, ensuring that the final product is both visually engaging and easy to use.
                     </p>
 
                     <Button href='/justinnamoro_resume.pdf'>View Resume</Button>
