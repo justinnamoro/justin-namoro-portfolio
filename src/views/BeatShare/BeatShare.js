@@ -54,10 +54,9 @@ export default function BeatShare(){
                     <div style={{margin:'50px'}}>
                     <h2 style={{marginTop:'25px'}}>Team Members:</h2>
                         <p>Joe Le (Full Stack Developer & Overseer)</p>
-                        <p>Justin Namoro (Front-end Developer & Project Manager)</p>
+                        <p>Justin Namoro (Front-end Developer, Designer & Project Manager)</p>
                         <p>Rocky Malubay (Front-end Developer & UI Designer)</p>
                         <p style={{marginBottom:'25px'}}>Kai Erfle (Lead Designer)</p>
-                    <p style={{fontWeight:'bold'}}>Date developed: March 2021</p>
 
                     </div>
 
@@ -69,12 +68,45 @@ export default function BeatShare(){
 
                 <ProjectDesc>
                     <p style={{maxWidth:'800px', marginBottom:50}}> 
-                    BCIT Term 4 Project. We were able to design and develop a social media app where users can share their taste in music. 
-                    This app was developed using React JS. As a Front-End Developer and Project Manager, I was in charge of connecting the app to 
-                    the back-end server, adding interactivity to the app, creating and styling components, as well as conducting weekly team meetings.
-                    It took about half a month to design and a month to develop.
-                    We are happy with the end results of this project!
+BeatShare is a social media app designed to help users share and discover music through a simple, engaging interface. Built as a BCIT Term 4 project, the app combines social features with personalized music sharing to create a fun, community‑driven experience.
+
+Our team designed and developed the app from the ground up, focusing on clean UI patterns, intuitive navigation, and smooth interaction flows.
                     </p>
+                    <h2 style={{maxWidth:'800px', marginBottom:50}}>My Role</h2>
+<p style={{maxWidth:'800px', marginBottom:50}}> 
+                  As the Front‑end Developer, Designer, and Project Manager, I contributed to both the technical implementation and the overall direction of the project. My responsibilities included:
+
+connecting the front‑end to the back‑end server
+
+building and styling reusable UI components
+
+adding interactivity and handling user actions
+
+refining layout clarity and improving user flows
+
+managing weekly team meetings and coordinating tasks
+
+This role allowed me to combine UX thinking with hands‑on development while guiding the team through a fast, collaborative build.
+                    </p>
+                    <h2 style={{maxWidth:'800px', marginBottom:50}}>What I Worked On</h2>
+<p style={{maxWidth:'800px', marginBottom:50}}> 
+                  Implemented front‑end features in React JS, including dynamic components and interactive UI behavior
+
+Connected the app to the back‑end API, handling data flow and state management
+
+Designed and refined key screens with a focus on hierarchy, readability, and smooth interactions
+
+Improved usability across core flows such as posting, browsing, and profile interactions
+
+Led weekly team meetings, organized tasks, and ensured consistent progress
+
+Collaborated with designers to translate wireframes into functional, responsive UI
+                    </p>
+                    <h2 style={{maxWidth:'800px', marginBottom:50}}>Outcome</h2>
+<p style={{maxWidth:'800px', marginBottom:50}}> 
+                  BeatShare was completed within a six‑week sprint, with two weeks dedicated to design and four weeks to development. The final product delivered a clean, functional prototype with intuitive flows, consistent UI patterns, and a strong foundation for future features. My contributions helped ensure the app was both visually clear and technically reliable.
+                    </p>
+
 
                     <h2>App Demo</h2>
                     <iframe style={{borderRadius:15}} width="100%" height="700" src="https://www.youtube.com/embed/T8fmZkj9FK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

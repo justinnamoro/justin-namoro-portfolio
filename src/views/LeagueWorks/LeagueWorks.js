@@ -58,7 +58,7 @@ export default function LeagueWorks(){
                         <p>Justin Namoro (Front-end Developer & Designer)</p>
                         <p>Herman Cheng (Front-end Developer & Designer)</p>
                         <p style={{marginBottom:'25px'}}>Justin Yee (Full-stack Developer)</p>
-                    <p style={{fontWeight:'bold'}}>Date developed: September 2020 - December 2020</p>
+        
 
                     </div>
 
@@ -70,10 +70,44 @@ export default function LeagueWorks(){
 
                 <ProjectDesc>
                     <p style={{maxWidth:'800px', marginBottom:50}}> 
-                    BCIT Term 3 Project. LeagueWorks is an all-in-one sport league management app catered towards atheletes and sports administrators. This app took
-                    lots of research and planning to develop. This app was developed with React Native. Tools such as Figma were used for designing the app and during the development phase, we used tools such as Visual Studio Code, Android Studio and Xcode.
-                    </p>
+                   LeagueWorks is an all‑in‑one sports league management app designed for athletes, coaches, and league administrators. The goal of the project was to simplify team organization, scheduling, and communication through a clean, mobile‑first experience.
 
+This project required extensive research, planning, and collaboration across design and development teams. We focused on creating a product that could support multiple user types while keeping the interface intuitive and easy to navigate.
+                    </p>
+                    <h2 style={{maxWidth:'800px', marginBottom:50}}>My Role</h2>
+<p style={{maxWidth:'800px', marginBottom:50}}> 
+                  As a Front‑end Developer and Designer, I contributed to both the UI design and React Native implementation of the app. My work centered on:
+
+refining user flows and improving layout clarity
+
+designing and building responsive, mobile‑friendly components
+
+ensuring visual consistency across screens and interactions
+
+collaborating with designers to translate wireframes into functional UI
+
+debugging layout issues and optimizing interaction behavior
+
+This project strengthened my ability to work across UX, UI, and development, especially within a mobile environment.
+                    </p>
+                                        <h2 style={{maxWidth:'800px', marginBottom:50}}>What I Worked On</h2>
+<p style={{maxWidth:'800px', marginBottom:50}}> 
+                  Designed key screens in Figma with a focus on hierarchy, readability, and intuitive navigation
+
+Implemented front‑end components in React Native, ensuring smooth interactions and responsive layouts
+
+Helped refine the onboarding and scheduling flows for better clarity and ease of use
+
+Conducted informal UX reviews to identify friction points and improve usability
+
+Collaborated closely with the design team to maintain consistency across the app
+
+Tested the app across iOS and Android simulators to ensure reliable performance
+                    </p>
+                    <h2 style={{maxWidth:'800px', marginBottom:50}}>Outcome</h2>
+<p style={{maxWidth:'800px', marginBottom:50}}> 
+                  LeagueWorks resulted in a functional mobile prototype that demonstrated clear user flows, consistent UI patterns, and a strong foundation for future development. My contributions helped improve the usability of the app and ensured the interface behaved predictably across devices.
+                    </p>
                     <h2>UI Design</h2>
                     <iframe style={{border:'1px solid rgba(0, 0, 0, 0.1)', borderRadius:15,marginBottom:50}} width="100%" height="700" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfA15NfYJoI2EkmPxSf19kH%2FHigh-Fidelity%3Fnode-id%3D10%253A108" allowfullscreen></iframe>
 

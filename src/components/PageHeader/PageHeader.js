@@ -46,7 +46,7 @@ export default function PageHeader() {
 
           <HiThere>Hi there 👋</HiThere>
           <Desc>
-            My name is Justin Namoro. I'm a Web Developer and UI/UX Designer based in Vancouver, BC!
+            My name is Justin Namoro. I’m a UI/UX Designer and Web Developer based in Vancouver, BC. I create clear, intuitive, and functional digital experiences.
           </Desc>
 
           <Button color='primary' href='/#basic-elements' style={{minWidth:180}}>View Projects</Button>
