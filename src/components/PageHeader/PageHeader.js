@@ -34,7 +34,7 @@ export default function PageHeader() {
       <div className="squares square7" />
       <Container>
         <div className="content-center brand">
-        <img src='/me.jpg' 
+        <img src='/siteicon@1x.png' 
           style=
           {{width:'185px', 
           height:'180px',
