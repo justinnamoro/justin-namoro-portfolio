@@ -64,12 +64,14 @@ export default function About() {
 
           <SplitDiv>
                 <motion.div style={{display:'flex', flexDirection:'column', alignItems: 'center',maxWidth:570, margin:20, justifyContent:'center'}} initial='out' animate='in' exit='out' variants={pageTransition}>
-                    <p style={{marginBottom:25}}>I studied Digital Design and Development at the British Columbia Institute of Technology for two years, where I built a strong foundation in front-end development, UI design, and responsive web technologies. I specialize in creating user-friendly websites and mobile applications using modern tools such as HTML, CSS, JavaScript, and React.
+                    <p style={{marginBottom:25}}>I’m a Graphic Designer, Digital Communications Specialist, and UI/UX Designer based in Vancouver, BC. I create clear, visually engaging, and user‑focused digital and print experiences across web, social media, publications, and brand communications.
 
-For every project, I focus on building intuitive interfaces and seamless user experiences. I care deeply about accessibility, performance, and clean design, ensuring that the final product is both visually engaging and easy to use.
+I studied Digital Design and Development at the British Columbia Institute of Technology, where I built a strong foundation in front‑end development, UI design, and responsive web technologies. Over time, my work expanded beyond web development into graphic design, digital storytelling, and cross‑platform communications.
+
+Today, I design digital and print materials, build accessible and user‑friendly web experiences, create social media content, and contribute to publication layouts and event‑related media. My work includes magazine design, promotional graphics, photography, and basic video editing.
                     </p>
 
-                    <Button href='/justinnamoro_resume.pdf'>View Resume</Button>
+                    <Button href='/justin_namoro_resume.pdf'>View Resume</Button>
 
                     
                 </motion.div>
@@ -80,7 +82,7 @@ For every project, I focus on building intuitive interfaces and seamless user ex
 
           </SplitDiv>
 
-          <SplitDiv>
+          {/* <SplitDiv>
               <Skills skillname='Front-End Developer'
               desc='I can create clean and organized code using my knowledge of HTML, CSS, and Javascript.
               One of my favourite tools in development is React. 
@@ -92,7 +94,7 @@ For every project, I focus on building intuitive interfaces and seamless user ex
               '
               bgcolor='#4d3287'
               />
-          </SplitDiv>
+          </SplitDiv> */}
           
 
 
