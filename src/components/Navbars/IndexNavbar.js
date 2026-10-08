@@ -83,7 +83,16 @@ export default function IndexNavbar() {
       .scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
+    <Navbar
+      className={"fixed-top " + color}
+      color-on-scroll="100"
+      expand="lg"
+      style={{
+        margin: "7px",
+        width: "calc(100% - 14px)",
+        borderRadius: "10px",
+      }}
+    >
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" tag={Link} id="navbar-brand">
