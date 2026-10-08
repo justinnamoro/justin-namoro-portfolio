@@ -129,6 +129,16 @@ export default function Basics() {
             </Col>
 
             <Col md="4" xs="12" style={{ padding: "10px" }}>
+              <a
+                href="/social_graphic.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
               <img
                 src="social_graphic.png"
                 alt="Social media graphic"
@@ -141,6 +151,7 @@ export default function Basics() {
               <p style={{ fontSize: "16px" , color: "#171940"}}>
                 Social Media Graphic – Event Promotion
               </p>
+            </a>
             </Col>
 
             <Col md="4" xs="12" style={{ padding: "10px" }}>
@@ -261,18 +272,40 @@ export default function Basics() {
 
           <Row>
             <Col md="6" xs="12" style={{ padding: "10px" }}>
+                          <a
+                href="/1.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
               <img
                 src="1.png"
                 alt="Event promo banner 1"
                 style={{ width: "100%", borderRadius: 15 }}
               />
+              </a>
             </Col>
             <Col md="6" xs="12" style={{ padding: "10px" }}>
+                                 <a
+                href="/2.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
               <img
                 src="2.png"
                 alt="Event promo banner 2"
                 style={{ width: "100%", borderRadius: 15 }}
               />
+              </a>
             </Col>
           </Row>
         </div>
@@ -325,7 +358,8 @@ export default function Basics() {
                   e.target.style.borderRadius = "8px";
                 }}
               />
-              <p style={{ fontSize: "18px" }}>Mars' Hill</p>
+              <p style={{ fontSize: "18px",
+          color: "#171940" }}>Mars' Hill</p>
             </Col>
             <Col
               tag={Link}
@@ -355,7 +389,8 @@ export default function Basics() {
                   e.target.style.borderRadius = "8px";
                 }}
               />
-              <p style={{ fontSize: "18px" }}>Visie</p>
+              <p style={{ fontSize: "18px",
+          color: "#171940" }}>Visie</p>
             </Col>
             <Col
               tag={Link}
@@ -385,7 +420,8 @@ export default function Basics() {
                   e.target.style.borderRadius = "8px";
                 }}
               />
-              <p style={{ fontSize: "18px" }}>BeatShare</p>
+              <p style={{ fontSize: "18px",
+          color: "#171940" }}>BeatShare</p>
             </Col>
             <Col
               tag={Link}
@@ -415,7 +451,8 @@ export default function Basics() {
                   e.target.style.borderRadius = "8px";
                 }}
               />
-              <p style={{ fontSize: "18px" }}>LeagueWorks</p>
+              <p style={{ fontSize: "18px",
+          color: "#171940" }}>LeagueWorks</p>
             </Col>
           </Row>
         </div>
