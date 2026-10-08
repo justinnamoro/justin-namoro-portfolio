@@ -90,7 +90,12 @@ export default function IndexNavbar() {
       style={{
         margin: "7px",
         width: "calc(100% - 14px)",
-        borderRadius: "10px",
+        borderRadius: "14px",
+        background: "rgba(17, 24, 39, 0.35)",
+        backdropFilter: "blur(14px)",
+        WebkitBackdropFilter: "blur(14px)",
+        border: "1px solid rgba(255, 255, 255, 0.18)",
+        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.2)",
       }}
     >
       <Container>

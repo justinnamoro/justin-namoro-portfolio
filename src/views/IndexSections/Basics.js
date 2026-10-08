@@ -85,9 +85,12 @@ export default function Basics() {
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
           borderRadius: "18px",
-          background: "#f7f9fc",
-          boxShadow: "0 8px 24px rgba(15, 23, 42, 0.03)",
-          border: "1px solid rgba(15, 23, 42, 0.04)",
+          background: "rgba(247, 249, 252, 0.72)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          boxShadow:
+            "0 12px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.7)",
+          border: "1px solid rgba(255, 255, 255, 0.5)",
           color: "#171940",
         }}
       >
@@ -189,10 +192,13 @@ export default function Basics() {
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
           borderRadius: "18px",
-          background: "#f3f7f1",
-          boxShadow: "0 8px 24px rgba(15, 23, 42, 0.03)",
-          border: "1px solid rgba(15, 23, 42, 0.04)",
-          color: "#171940",
+          background: "rgba(247, 249, 252, 0.72)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          boxShadow:
+            "0 12px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.7)",
+          border: "1px solid rgba(255, 255, 255, 0.5)",
+          color: "#171940"
         }}
       >
         <h1 style={{ fontWeight: 600, marginBottom: "18px" , color: "#171940"}}>
@@ -252,10 +258,13 @@ export default function Basics() {
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
           borderRadius: "18px",
-          background: "#f9f3f7",
-          boxShadow: "0 8px 24px rgba(15, 23, 42, 0.03)",
-          border: "1px solid rgba(15, 23, 42, 0.04)",
-          color: "#171940",
+          background: "rgba(247, 249, 252, 0.72)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          boxShadow:
+            "0 12px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.7)",
+          border: "1px solid rgba(255, 255, 255, 0.5)",
+          color: "#171940"
         }}
       >
         <h1 style={{ fontWeight: 600, marginBottom: "18px" , color: "#171940"}}>
@@ -317,9 +326,12 @@ export default function Basics() {
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
           borderRadius: "18px",
-          background: "#eef5fb",
-          boxShadow: "0 8px 24px rgba(15, 23, 42, 0.03)",
-          border: "1px solid rgba(15, 23, 42, 0.04)",
+          background: "rgba(247, 249, 252, 0.72)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          boxShadow:
+            "0 12px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.7)",
+          border: "1px solid rgba(255, 255, 255, 0.5)",
           color: "#171940",
         }}
       >
