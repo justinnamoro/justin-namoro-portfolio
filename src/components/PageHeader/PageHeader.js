@@ -44,9 +44,9 @@ export default function PageHeader() {
         }}
           />
 
-          <HiThere>Hi there 👋</HiThere>
+          <HiThere>Justin Namoro</HiThere>
           <Desc>
-            My name is Justin Namoro. I’m a Graphic Designer, Digital Communications Specialist, and UI/UX Designer based in Vancouver, BC. I create clear, visually engaging, and user‑focused digital and print experiences across web, social media, publications, and brand communications.
+            UI/UX Designer, Web Developer, and Digital Designer based in Vancouver, BC. I create intuitive, visually engaging, and user-focused digital experiences across websites, web applications, dashboards, and digital products.
           </Desc>
 
           <Button color='primary' href='/#basic-elements' style={{minWidth:180}}>View Projects</Button>
