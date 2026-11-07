@@ -64,11 +64,13 @@ export default function About() {
 
           <SplitDiv>
                 <motion.div style={{display:'flex', flexDirection:'column', alignItems: 'center',maxWidth:570, margin:20, justifyContent:'center'}} initial='out' animate='in' exit='out' variants={pageTransition}>
-                    <p style={{marginBottom:25}}>I’m a Graphic Designer, Digital Communications Specialist, and UI/UX Designer based in Vancouver, BC. I create clear, visually engaging, and user‑focused digital and print experiences across web, social media, publications, and brand communications.
+                    <p style={{marginBottom:25}}>I'm a Vancouver-based UI/UX, web, and graphic designer passionate about creating intuitive digital experiences and engaging visual content. My work spans web design, user experience, graphic design, publishing, social media, and digital communications.
 
-I studied Digital Design and Development at the British Columbia Institute of Technology, where I built a strong foundation in front‑end development, UI design, and responsive web technologies. Over time, my work expanded beyond web development into graphic design, digital storytelling, and cross‑platform communications.
+I studied Digital Design and Development at the British Columbia Institute of Technology (BCIT), where I built a strong foundation in front-end development, UI design, and responsive web technologies. Over time, my interests expanded into graphic design, editorial design, visual storytelling, and creative media production.
 
-Today, I design digital and print materials, build accessible and user‑friendly web experiences, create social media content, and contribute to publication layouts and event‑related media. My work includes magazine design, promotional graphics, photography, and basic video editing.
+Today, I design websites, digital products, publications, marketing materials, and branded content for educational, nonprofit, publishing, and faith-based organizations. My experience includes publication layouts, promotional graphics, photography, videography, motion graphics, and user-focused digital experiences.
+
+Whether I'm designing a magazine layout, building a web interface, creating event promotions, or producing visual content, I aim to create work that is clear, engaging, and meaningful.
                     </p>
 
                     <Button href='/justin_namoro_resume.pdf'>View Resume</Button>
