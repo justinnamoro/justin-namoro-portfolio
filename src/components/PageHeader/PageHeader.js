@@ -19,7 +19,37 @@ const HiThere = styled.h1`
 `;
 
 const Desc = styled.h4`
-font-size: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+
+  @media (max-width: 760px) {
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+`;
+
+const ProfileImage = styled.img`
+  width: 185px;
+  height: 180px;
+  border-radius: 30px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+
+  @media (max-width: 760px) {
+    width: 140px;
+    height: 140px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+`;
+
+const ProjectsButton = styled(Button)`
+  @media (max-width: 760px) {
+    display: none;
+  }
 `;
 
 export default function PageHeader() {
@@ -34,22 +64,20 @@ export default function PageHeader() {
       <div className="squares square7" />
       <Container>
         <div className="content-center brand">
-        <img src='/siteicon@1x.png' 
-          style=
-          {{width:'185px', 
-          height:'180px',
-          borderRadius:'30px',
-          marginTop:'150px',
-          marginBottom:'50px'
-        }}
-          />
+        <ProfileImage src='/siteicon@1x.png' alt="Justin Namoro" />
 
           <HiThere>Justin Namoro</HiThere>
           <Desc>
-            UI/UX Designer, Web Developer, and Digital Designer based in Vancouver, BC. I create intuitive, visually engaging, and user-focused digital experiences across websites, web applications, dashboards, and digital products.
+            Vancouver-based UI/UX, web, and graphic designer creating intuitive digital experiences, engaging visual content, and user centered design solutions.
           </Desc>
 
-          <Button color='primary' href='/#basic-elements' style={{minWidth:180}}>View Projects</Button>
+          <ProjectsButton
+            color='primary'
+            href='/#basic-elements'
+
+          >
+            View Projects
+          </ProjectsButton>
 
 
         </div>
