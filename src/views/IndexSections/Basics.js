@@ -186,6 +186,88 @@ export default function Basics() {
         </div>
       </Container>
 
+            <Container
+        style={{
+          textAlign: "center",
+          margin: "0 auto 36px",
+          padding: "28px 24px 24px",
+          borderRadius: "18px",
+          background: "rgba(247, 249, 252, 0.72)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          boxShadow:
+            "0 12px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.7)",
+          border: "1px solid rgba(255, 255, 255, 0.5)",
+          color: "#171940",
+        }}
+      >
+        <h1 style={{ fontWeight: 600, marginBottom: "18px", color: "#171940"}}>
+          Website Migration & CMS Implementation
+        </h1>
+        <div className="parent-animate" ref={ref}>
+          <p style={{ marginBottom: "30px" , color: "#171940"}}>
+Supported the migration of parish and ministry websites from Tilma CMS to WebStudio. 
+Recreated website layouts, organized content, improved usability, and ensured responsive, accessible experiences across multiple sites.
+
+Tools used: WebStudio, HTML, CSS, CMS Migration, Responsive Design
+          </p>
+
+          <Row>
+            <Col md="6" xs="12" style={{ padding: "10px" }}>
+              <a
+                href="https://saintmatthews.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                <img
+                  src="/stmatthews.png"
+                  alt="Saint Matthew's website"
+                  style={{
+                    width: "100%",
+                    borderRadius: 15,
+                    marginBottom: "10px",
+                  }}
+                />
+                <p style={{ fontSize: "16px" , color: "#171940"}}>
+                  Website - Saint Matthew's Parish
+                </p>
+              </a>
+            </Col>
+
+            <Col md="6" xs="12" style={{ padding: "10px" }}>
+              <a
+                href="https://olgcsurrey.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+              <img
+                src="/olgc.png"
+                alt="OLGC website"
+                style={{
+                  width: "100%",
+                  borderRadius: 15,
+                  marginBottom: "10px",
+                }}
+              />
+              <p style={{ fontSize: "16px" , color: "#171940"}}>
+                Website - OLGC Surrey
+              </p>
+            </a>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+
       <Container
         style={{
           textAlign: "center",
