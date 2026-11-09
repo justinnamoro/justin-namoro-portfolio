@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from 'styled-components';
 // reactstrap components
 import {
@@ -44,16 +44,84 @@ const LinkHover = styled(NavLink)`
 }
 `;
 
+const MobileBottomNav = styled.nav`
+  display: none;
+
+  @media (max-width: 767.98px) {
+    position: fixed;
+    z-index: 1030;
+    right: 7px;
+    bottom: max(7px, env(safe-area-inset-bottom));
+    left: 7px;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 4px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+
+    button {
+      flex: 1;
+      min-width: 0;
+      padding: 6px 2px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #fff;
+      font: inherit;
+      font-size: 11px;
+      line-height: 1.2;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button[aria-current="location"] {
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    }
+  }
+`;
+
 export default function IndexNavbar() {
+  const location = useLocation();
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
+  const [activeProject, setActiveProject] = React.useState("");
   React.useEffect(() => {
     window.addEventListener("scroll", changeColor);
     return function cleanup() {
       window.removeEventListener("scroll", changeColor);
     };
   },[]);
+  React.useEffect(() => {
+    const projectIds = [
+      "graphic-design-communications",
+      "web-migration-cms",
+      "short-film",
+      "web-dev-ui-ux",
+    ];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleProjects = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+        if (visibleProjects.length) {
+          setActiveProject(visibleProjects[0].target.id);
+        }
+      },
+      { rootMargin: "-35% 0px -50% 0px", threshold: 0 }
+    );
+    projectIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+    return () => observer.disconnect();
+  }, []);
   const changeColor = () => {
     if (
       document.documentElement.scrollTop > 99 ||
@@ -82,7 +150,12 @@ export default function IndexNavbar() {
       .getElementById("download-section")
       .scrollIntoView({ behavior: "smooth" });
   };
+  const scrollToProject = (id) => {
+    setActiveProject(id);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
+    <>
     <Navbar
       className={"fixed-top " + color}
       color-on-scroll="100"
@@ -182,7 +255,7 @@ export default function IndexNavbar() {
             <NavItem>
                 <LinkHover tag={Link} to='/Contact'>Contact</LinkHover>
             </NavItem>
-            <UncontrolledDropdown nav>
+            <UncontrolledDropdown nav className="d-none d-lg-block">
               <DropdownToggle
                 caret
                 color="default"
@@ -196,17 +269,17 @@ export default function IndexNavbar() {
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
 
-                <DropdownItem tag={Link} to="/MarsHill" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  TWU Mars' Hill
+                <DropdownItem href="#graphic-design-communications" onClick={(e) => { e.preventDefault(); document.getElementById("graphic-design-communications")?.scrollIntoView({ behavior: "smooth" }); }}>
+                  Graphic Design & Communications
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/BeatShare" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  BeatShare
+                <DropdownItem href="#web-migration-cms" onClick={(e) => { e.preventDefault(); document.getElementById("web-migration-cms")?.scrollIntoView({ behavior: "smooth" }); }}>
+                  Website Migration & CMS Implementation
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Visie" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  Visie
+                <DropdownItem href="#short-film" onClick={(e) => { e.preventDefault(); document.getElementById("short-film")?.scrollIntoView({ behavior: "smooth" }); }}>
+                  Media Production
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/LeagueWorks" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  LeagueWorks
+                <DropdownItem href="#web-dev-ui-ux" onClick={(e) => { e.preventDefault(); document.getElementById("web-dev-ui-ux")?.scrollIntoView({ behavior: "smooth" }); }}>
+                  Web Development & UI/UX
                 </DropdownItem>
 
 
@@ -221,5 +294,20 @@ export default function IndexNavbar() {
         </Collapse>
       </Container>
     </Navbar>
+    {(location.pathname === "/" || location.pathname === "") && <MobileBottomNav aria-label="Project sections">
+      <button type="button" aria-current={activeProject === "graphic-design-communications" ? "location" : undefined} onClick={() => scrollToProject("graphic-design-communications")}>
+        Graphic Design
+      </button>
+      <button type="button" aria-current={activeProject === "web-migration-cms" ? "location" : undefined} onClick={() => scrollToProject("web-migration-cms")}>
+        Migration &amp; CMS
+      </button>
+      <button type="button" aria-current={activeProject === "short-film" ? "location" : undefined} onClick={() => scrollToProject("short-film")}>
+        Media
+      </button>
+      <button type="button" aria-current={activeProject === "web-dev-ui-ux" ? "location" : undefined} onClick={() => scrollToProject("web-dev-ui-ux")}>
+        Web &amp; UI/UX
+      </button>
+    </MobileBottomNav>}
+    </>
   );
 }

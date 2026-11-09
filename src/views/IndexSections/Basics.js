@@ -72,7 +72,7 @@ export default function Basics() {
   },[inView])
 
   return (
-    <div id="basic-elements" style={{ paddingTop: "15px" }}>
+    <div id="basic-elements" style={{ paddingTop: "15px", scrollMarginTop: "80px" }}>
       <img
         alt="..."
         className="path"
@@ -80,7 +80,9 @@ export default function Basics() {
       />
 
       <Container
+        id="graphic-design-communications"
         style={{
+          scrollMarginTop: "100px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
@@ -121,6 +123,8 @@ export default function Basics() {
                   alt="Mars' Hill Magazine spread"
                   style={{
                     width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
                     borderRadius: 15,
                     marginBottom: "10px",
                   }}
@@ -147,6 +151,8 @@ export default function Basics() {
                 alt="Social media graphic"
                 style={{
                   width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
                   borderRadius: 15,
                   marginBottom: "10px",
                 }}
@@ -173,6 +179,9 @@ export default function Basics() {
                   alt="Photography event coverage album"
                   style={{
                     width: "100%",
+                    height: "auto",
+                    aspectRatio: "3 / 4",
+                    objectFit: "cover",
                     borderRadius: 15,
                     marginBottom: "10px",
                   }}
@@ -182,12 +191,61 @@ export default function Basics() {
                 </p>
               </a>
             </Col>
+
+          </Row>
+          <Row>
+            
+            <Col md="6" xs="12" style={{ padding: "10px" }}>
+                          <a
+                href="/1.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+              <img
+                src="1.png"
+                alt="Event promo banner 1"
+                style={{ width: "100%", borderRadius: 15, marginBottom: "10px" }}
+              />
+                <p style={{ fontSize: "16px" , color: "#171940"}}>
+                  Event Promotion – Facebook Banner Design 1
+                </p>
+              </a>
+            </Col>
+            <Col md="6" xs="12" style={{ padding: "10px" }}>
+                                 <a
+                href="/2.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+              <img
+                src="2.png"
+                alt="Event promo banner 2"
+                style={{ width: "100%", borderRadius: 15, marginBottom: "10px" }}
+              />
+              <p style={{ fontSize: "16px" , color: "#171940"}}>
+                  Event Promotion – Facebook Banner Design 2
+                </p>
+              </a>
+            </Col>
+
           </Row>
         </div>
       </Container>
 
             <Container
+        id="web-migration-cms"
         style={{
+          scrollMarginTop: "100px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
@@ -321,7 +379,9 @@ Tools used: WebStudio, HTML, CSS, CMS Migration, Responsive Design
       </Container>
 
       <Container
+      id="short-film"
         style={{
+          scrollMarginTop: "100px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
@@ -387,75 +447,9 @@ Tools used: WebStudio, HTML, CSS, CMS Migration, Responsive Design
       </Container>
 
       <Container
+      id="web-dev-ui-ux"
         style={{
-          textAlign: "center",
-          margin: "0 auto 36px",
-          padding: "28px 24px 24px",
-          borderRadius: "18px",
-          background: "rgba(247, 249, 252, 0.72)",
-          backdropFilter: "blur(14px)",
-          WebkitBackdropFilter: "blur(14px)",
-          boxShadow:
-            "0 12px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.7)",
-          border: "1px solid rgba(255, 255, 255, 0.5)",
-          color: "#171940"
-        }}
-      >
-        <h1 style={{ fontWeight: 600, marginBottom: "18px" , color: "#171940"}}>
-          Event Promotion – Facebook Banner Design
-        </h1>
-        <div className="parent-animate" ref={ref}>
-          <p style={{ marginBottom: "30px" , color: "#171940"}}>
-            Designed a promotional Facebook banner for a large community concert,
-            focusing on clear visual hierarchy, strong typography, and
-            brand-aligned graphics. Created a layout optimized for social media
-            visibility and audience engagement, ensuring the design remained
-            readable and visually appealing across desktop and mobile formats.
-          </p>
-
-          <Row>
-            <Col md="6" xs="12" style={{ padding: "10px" }}>
-                          <a
-                href="/1.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "block",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-              <img
-                src="1.png"
-                alt="Event promo banner 1"
-                style={{ width: "100%", borderRadius: 15 }}
-              />
-              </a>
-            </Col>
-            <Col md="6" xs="12" style={{ padding: "10px" }}>
-                                 <a
-                href="/2.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "block",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-              <img
-                src="2.png"
-                alt="Event promo banner 2"
-                style={{ width: "100%", borderRadius: 15 }}
-              />
-              </a>
-            </Col>
-          </Row>
-        </div>
-      </Container>
-
-      <Container
-        style={{
+          scrollMarginTop: "100px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
