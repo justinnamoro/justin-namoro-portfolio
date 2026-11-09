@@ -278,7 +278,7 @@ export default function IndexNavbar() {
             <NavItem>
                 <LinkHover tag={Link} to='/Contact'>Contact</LinkHover>
             </NavItem>
-            <UncontrolledDropdown nav className="d-none d-lg-block">
+            {(location.pathname === "/" || location.pathname === "") && <UncontrolledDropdown nav className="d-none d-lg-block">
               <DropdownToggle
                 caret
                 color="default"
@@ -311,7 +311,7 @@ export default function IndexNavbar() {
                
                 
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown>}
 
           </Nav>
         </Collapse>
