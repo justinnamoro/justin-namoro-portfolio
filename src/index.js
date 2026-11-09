@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 
 import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss?v=1.2.0";
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="/Visie" exact component={Visie}/>
       <Route path="/MarsHill" exact component={MarsHill}/>
     </Switch>
+    <Analytics />
   </BrowserRouter>,
   document.getElementById("root")
 );
