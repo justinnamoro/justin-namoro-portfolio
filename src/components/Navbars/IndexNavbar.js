@@ -185,7 +185,18 @@ export default function IndexNavbar() {
     >
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand to="/" tag={Link} id="navbar-brand">
+          <NavbarBrand
+            to="/"
+            tag={Link}
+            id="navbar-brand"
+            onClick={(event) => {
+              if (location.pathname === "/" || location.pathname === "") {
+                event.preventDefault();
+                setActiveProject("");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <span>Namoro • </span>
             JS
           </NavbarBrand>
