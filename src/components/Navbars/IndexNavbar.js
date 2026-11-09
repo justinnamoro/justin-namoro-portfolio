@@ -107,6 +107,10 @@ export default function IndexNavbar() {
     ];
     const observer = new IntersectionObserver(
       (entries) => {
+        if (window.scrollY <= 100) {
+          setActiveProject("");
+          return;
+        }
         const visibleProjects = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
@@ -116,11 +120,19 @@ export default function IndexNavbar() {
       },
       { rootMargin: "-35% 0px -50% 0px", threshold: 0 }
     );
+    const resetAtTop = () => {
+      if (window.scrollY <= 100) setActiveProject("");
+    };
+    window.addEventListener("scroll", resetAtTop);
+    resetAtTop();
     projectIds.forEach((id) => {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", resetAtTop);
+    };
   }, []);
   const changeColor = () => {
     if (
@@ -295,6 +307,9 @@ export default function IndexNavbar() {
       </Container>
     </Navbar>
     {(location.pathname === "/" || location.pathname === "") && <MobileBottomNav aria-label="Project sections">
+      <button type="button" aria-label="Back to top" aria-current={activeProject === "" ? "location" : undefined} onClick={() => { setActiveProject(""); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+        <i className="fas fa-home" aria-hidden="true" />
+      </button>
       <button type="button" aria-current={activeProject === "graphic-design-communications" ? "location" : undefined} onClick={() => scrollToProject("graphic-design-communications")}>
         Graphic Design
       </button>
