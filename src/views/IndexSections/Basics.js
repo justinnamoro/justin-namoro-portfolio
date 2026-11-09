@@ -101,8 +101,7 @@ export default function Basics() {
         </h1>
         <div className="parent-animate" ref={ref}>
           <p style={{ marginBottom: "30px" , color: "#171940"}}>
-            A selection of digital and print design work including publication
-            layouts, social media graphics, and photography created for campus
+            A selection of digital and print design work including social media graphics, publication, and photography created for campus
             publications, nonprofit organizations, and community events.
           </p>
 
