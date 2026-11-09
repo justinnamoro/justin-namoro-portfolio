@@ -264,6 +264,58 @@ Tools used: WebStudio, HTML, CSS, CMS Migration, Responsive Design
               </p>
             </a>
             </Col>
+
+                        <Col md="6" xs="12" style={{ padding: "10px" }}>
+              <a
+                href="https://brooklyncocathedral.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+              <img
+                src="/brooklyncocathedral.png"
+                alt="Co-Cathedral of St. Joseph website"
+                style={{
+                  width: "100%",
+                  borderRadius: 15,
+                  marginBottom: "10px",
+                }}
+              />
+              <p style={{ fontSize: "16px" , color: "#171940"}}>
+                Website - Co-Cathedral of St. Joseph - Brooklyn, NY
+              </p>
+            </a>
+            </Col>
+
+                        <Col md="6" xs="12" style={{ padding: "10px" }}>
+              <a
+                href="https://holyfamily-stthomas-brooklyn.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+              <img
+                src="/holyfamily-stthomas-brooklyn.png"
+                alt="Holy Family - St Thomas website"
+                style={{
+                  width: "100%",
+                  borderRadius: 15,
+                  marginBottom: "10px",
+                }}
+              />
+              <p style={{ fontSize: "16px" , color: "#171940"}}>
+                Website - Holy Family - St Thomas - Brooklyn, NY
+              </p>
+            </a>
+            </Col>
           </Row>
         </div>
       </Container>
