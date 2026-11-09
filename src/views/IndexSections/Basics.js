@@ -130,7 +130,7 @@ export default function Basics() {
                   }}
                 />
                 <p style={{ fontSize: "16px" , color: "#171940"}}>
-                  Publication Layout – Mars’ Hill Magazine
+                  Publication – Mars’ Hill Magazine
                 </p>
               </a>
             </Col>
