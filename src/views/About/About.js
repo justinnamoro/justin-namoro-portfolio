@@ -69,8 +69,6 @@ export default function About() {
 I studied Digital Design and Development at the British Columbia Institute of Technology (BCIT), where I built a strong foundation in front-end development, UI design, and responsive web technologies. Over time, my interests expanded into graphic design, editorial design, visual storytelling, and creative media production.
 
 Today, I design websites, digital products, publications, marketing materials, and branded content for educational, nonprofit, publishing, and faith-based organizations. My experience includes publication layouts, promotional graphics, photography, videography, motion graphics, and user-focused digital experiences.
-
-Whether I'm designing a magazine layout, building a web interface, creating event promotions, or producing visual content, I aim to create work that is clear, engaging, and meaningful.
                     </p>
 
                     <Button href='/justin_namoro_resume.pdf'>View Resume</Button>
