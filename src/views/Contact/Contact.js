@@ -87,7 +87,7 @@ export default function Contact() {
                   required
                   style={{
                     minHeight: 48,
-                    color: "inherit",
+                    color: "#fff",
                     background: "rgba(255, 255, 255, 0.1)",
                     border: "1px solid rgba(255, 255, 255, 0.25)",
                     borderRadius: 10,
@@ -106,7 +106,7 @@ export default function Contact() {
                   required
                   minLength={10}
                   style={{
-                    color: "inherit",
+                    color: "#fff",
                     background: "rgba(255, 255, 255, 0.1)",
                     border: "1px solid rgba(255, 255, 255, 0.25)",
                     borderRadius: 10,
