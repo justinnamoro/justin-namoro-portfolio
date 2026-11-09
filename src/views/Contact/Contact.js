@@ -51,24 +51,81 @@ export default function Contact() {
 
       <Container>
 
-        <motion.div className='contact-page' initial='out' animate='in' exit='out' variants={pageTransition}>
-            <form action='https://formspree.io/f/mrgrqlrl' method='POST'>
+        <motion.div
+          className="contact-page"
+          initial="out"
+          animate="in"
+          exit="out"
+          variants={pageTransition}
+          style={{ maxWidth: 620, margin: "50px auto 0" }}
+        >
+          <div
+            style={{
+              padding: "clamp(24px, 5vw, 48px)",
+              borderRadius: 20,
+              background: "rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              boxShadow: "0 20px 60px rgba(0, 0, 0, 0.2)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+            }}
+          >
+            <h2 style={{ marginBottom: 8 }}>Get in touch</h2>
+            <p style={{ marginBottom: 28, opacity: 0.8 }}>
+              Questions or ideas? Send them right here, and I'll get back to you.
+            </p>
 
+            <form action="https://formspree.io/f/mrgrqlrl" method="POST">
+              <FormGroup>
+                <Label for="contact-email">Email address</Label>
+                <Input
+                  id="contact-email"
+                  placeholder="you@example.com"
+                  type="email"
+                  name="_replyto"
+                  autoComplete="email"
+                  required
+                  style={{
+                    minHeight: 48,
+                    color: "inherit",
+                    background: "rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(255, 255, 255, 0.25)",
+                    borderRadius: 10,
+                  }}
+                />
+              </FormGroup>
 
-                <FormGroup>
-                    <Input placeholder='Email' type='email' name="_replyto"/>
-                </FormGroup>
+              <FormGroup>
+                <Label for="contact-message">Message</Label>
+                <Input
+                  id="contact-message"
+                  type="textarea"
+                  rows="5"
+                  placeholder="How can I help?"
+                  name="message"
+                  required
+                  minLength={10}
+                  style={{
+                    color: "inherit",
+                    background: "rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(255, 255, 255, 0.25)",
+                    borderRadius: 10,
+                    resize: "vertical",
+                  }}
+                />
+              </FormGroup>
 
-                <FormGroup>
-                    <Input type='textarea' placeholder='Message' name="message"/>
-                </FormGroup>
-
-                <Input type='submit'/>
-
+              <Button
+                type="submit"
+                color="primary"
+                className="btn-round"
+                style={{ minWidth: 140, marginTop: 8 }}
+              >
+                Send message
+              </Button>
             </form>
+          </div>
         </motion.div>
-
-            <h1 style={{ marginTop:50, fontWeight:600}}>Questions or inquiries? Send them right here 🤗</h1>
 
 
         {/* <Row className="row-grid justify-content-between align-items-center">

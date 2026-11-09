@@ -108,34 +108,6 @@ export default function Basics() {
           <Row>
             <Col md="4" xs="12" style={{ padding: "10px" }}>
               <a
-                href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_07_hyacinth"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "block",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                <img
-                  src="mhill_spread.png"
-                  alt="Mars' Hill Magazine spread"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "contain",
-                    borderRadius: 15,
-                    marginBottom: "10px",
-                  }}
-                />
-                <p style={{ fontSize: "16px" , color: "#171940"}}>
-                  Publication – Mars’ Hill Magazine
-                </p>
-              </a>
-            </Col>
-
-            <Col md="4" xs="12" style={{ padding: "10px" }}>
-              <a
                 href="/social_graphic.png"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -160,6 +132,34 @@ export default function Basics() {
                 Social Media Graphic – Event Promotion
               </p>
             </a>
+            </Col>
+
+            <Col md="4" xs="12" style={{ padding: "10px" }}>
+              <a
+                href="https://issuu.com/marshillonline/docs/_volume_30_-_issue_07_hyacinth"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                <img
+                  src="mhill_spread.png"
+                  alt="Mars' Hill Magazine spread"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                    borderRadius: 15,
+                    marginBottom: "10px",
+                  }}
+                />
+                <p style={{ fontSize: "16px" , color: "#171940"}}>
+                  Publication – Mars’ Hill Magazine
+                </p>
+              </a>
             </Col>
 
             <Col md="4" xs="12" style={{ padding: "10px" }}>

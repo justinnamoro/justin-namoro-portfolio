@@ -48,8 +48,8 @@ const TopNavbar = styled(Navbar)`
   border-radius: 14px;
 
   @media (min-width: 768px) {
-    border-bottom-left-radius: ${({ $isScrolled }) => ($isScrolled ? "14px" : "0")};
-    border-bottom-right-radius: ${({ $isScrolled }) => ($isScrolled ? "14px" : "0")};
+    border-bottom-left-radius: ${({ $isScrolled, $isHome }) => ($isScrolled || !$isHome ? "14px" : "0")};
+    border-bottom-right-radius: ${({ $isScrolled, $isHome }) => ($isScrolled || !$isHome ? "14px" : "0")};
   }
 `;
 
@@ -241,6 +241,7 @@ export default function IndexNavbar() {
     <TopNavbar
       className={"fixed-top " + color}
       $isScrolled={isScrolled}
+      $isHome={location.pathname === "/" || location.pathname === ""}
       color-on-scroll="100"
       expand="lg"
       style={{
