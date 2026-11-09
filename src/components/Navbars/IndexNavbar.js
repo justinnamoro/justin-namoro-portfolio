@@ -44,67 +44,111 @@ const LinkHover = styled(NavLink)`
 }
 `;
 
+const TopNavbar = styled(Navbar)`
+  border-radius: 14px;
+
+  @media (min-width: 768px) {
+    border-bottom-left-radius: ${({ $isScrolled }) => ($isScrolled ? "14px" : "0")};
+    border-bottom-right-radius: ${({ $isScrolled }) => ($isScrolled ? "14px" : "0")};
+  }
+`;
+
 const MobileBottomNav = styled.nav`
-  display: none;
+  position: fixed;
+  z-index: 1029;
+  top: 85px;
+  right: 7px;
+  left: 7px;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+
+  @media (min-width: 768px) {
+    button[aria-label="Back to top"] {
+      display: none;
+    }
+
+    &.at-top {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 4px;
+    width: calc((100% - 8px) / 5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    transform: translateX(calc(var(--active-index, 0) * 100%));
+    transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  @media (min-width: 768px) {
+    &::before {
+      width: calc((100% - 8px) / 4);
+      transform: translateX(calc(max(0, var(--active-index, 0) - 1) * 100%));
+    }
+  }
+
+  button {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-width: 0;
+    padding: 6px 2px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  button[aria-current="location"] {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
   @media (max-width: 767.98px) {
-    position: fixed;
+    top: auto;
     z-index: 1030;
     right: 7px;
     bottom: max(7px, env(safe-area-inset-bottom));
     left: 7px;
-    display: flex;
-    justify-content: space-around;
-    padding: 8px 4px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 14px;
-    background: rgba(17, 24, 39, 0.75);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 8px;
-      bottom: 8px;
-      left: 4px;
-      width: calc((100% - 8px) / 5);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.16);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-      transform: translateX(calc(var(--active-index, 0) * 100%));
-      transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
-      pointer-events: none;
-    }
-
-    button {
-      position: relative;
-      z-index: 1;
-      flex: 1;
-      min-width: 0;
-      padding: 6px 2px;
-      border: 0;
-      border-radius: 10px;
-      background: transparent;
-      color: #fff;
-      font: inherit;
-      font-size: 11px;
-      line-height: 1.2;
-      text-align: center;
-      cursor: pointer;
-      transition: background 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    button[aria-current="location"] {
-      background: transparent;
-      box-shadow: none;
-    }
+    font-size: 11px;
 
     @media (prefers-reduced-motion: reduce) {
       &::before {
         transition: none;
       }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before {
+      transition: none;
     }
   }
 `;
@@ -115,7 +159,9 @@ export default function IndexNavbar() {
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
   const [activeProject, setActiveProject] = React.useState("");
+  const [isScrolled, setIsScrolled] = React.useState(false);
   React.useEffect(() => {
+    changeColor();
     window.addEventListener("scroll", changeColor);
     return function cleanup() {
       window.removeEventListener("scroll", changeColor);
@@ -158,6 +204,7 @@ export default function IndexNavbar() {
     };
   }, []);
   const changeColor = () => {
+    setIsScrolled(window.scrollY > 99);
     if (
       document.documentElement.scrollTop > 99 ||
       document.body.scrollTop > 99
@@ -191,14 +238,14 @@ export default function IndexNavbar() {
   };
   return (
     <>
-    <Navbar
+    <TopNavbar
       className={"fixed-top " + color}
+      $isScrolled={isScrolled}
       color-on-scroll="100"
       expand="lg"
       style={{
         margin: "7px",
         width: "calc(100% - 14px)",
-        borderRadius: "14px",
         background: "rgba(17, 24, 39, 0.35)",
         backdropFilter: "blur(14px)",
         WebkitBackdropFilter: "blur(14px)",
@@ -301,7 +348,7 @@ export default function IndexNavbar() {
             <NavItem>
                 <LinkHover tag={Link} to='/Contact'>Contact</LinkHover>
             </NavItem>
-            {(location.pathname === "/" || location.pathname === "") && <UncontrolledDropdown nav className="d-none d-lg-block">
+            {/* {(location.pathname === "/" || location.pathname === "") && <UncontrolledDropdown nav className="d-none d-lg-block">
               <DropdownToggle
                 caret
                 color="default"
@@ -334,13 +381,13 @@ export default function IndexNavbar() {
                
                 
               </DropdownMenu>
-            </UncontrolledDropdown>}
+            </UncontrolledDropdown>} */}
 
           </Nav>
         </Collapse>
       </Container>
-    </Navbar>
-    {(location.pathname === "/" || location.pathname === "") && <MobileBottomNav aria-label="Project sections" style={{ "--active-index": Math.max(0, ["", "graphic-design-communications", "web-migration-cms", "short-film", "web-dev-ui-ux"].indexOf(activeProject)) }}>
+    </TopNavbar>
+    {(location.pathname === "/" || location.pathname === "") && <MobileBottomNav className={isScrolled ? "" : "at-top"} aria-label="Project sections" style={{ "--active-index": Math.max(0, ["", "graphic-design-communications", "web-migration-cms", "short-film", "web-dev-ui-ux"].indexOf(activeProject)) }}>
       <button type="button" aria-label="Back to top" aria-current={activeProject === "" ? "location" : undefined} onClick={() => { setActiveProject(""); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
         <i className="fas fa-home" aria-hidden="true" />
       </button>
