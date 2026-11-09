@@ -28,6 +28,7 @@ const Desc = styled.h4`
     line-height: 1.35;
     margin-bottom: 16px;
     padding: 0 8px;
+    text-align: left;
   }
 `;
 

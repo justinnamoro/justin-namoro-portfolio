@@ -72,7 +72,7 @@ export default function Basics() {
   },[inView])
 
   return (
-    <div id="basic-elements" style={{ paddingTop: "15px", scrollMarginTop: "80px" }}>
+    <div id="basic-elements" style={{ paddingTop: "15px", scrollMarginTop: "150px" }}>
       <img
         alt="..."
         className="path"
@@ -82,7 +82,7 @@ export default function Basics() {
       <Container
         id="graphic-design-communications"
         style={{
-          scrollMarginTop: "100px",
+          scrollMarginTop: "150px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
@@ -244,7 +244,7 @@ export default function Basics() {
             <Container
         id="web-migration-cms"
         style={{
-          scrollMarginTop: "100px",
+          scrollMarginTop: "150px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
@@ -380,7 +380,7 @@ Tools used: WebStudio, HTML, CSS, CMS Migration, Responsive Design
       <Container
       id="short-film"
         style={{
-          scrollMarginTop: "100px",
+          scrollMarginTop: "150px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
@@ -448,7 +448,7 @@ Tools used: WebStudio, HTML, CSS, CMS Migration, Responsive Design
       <Container
       id="web-dev-ui-ux"
         style={{
-          scrollMarginTop: "100px",
+          scrollMarginTop: "150px",
           textAlign: "center",
           margin: "0 auto 36px",
           padding: "28px 24px 24px",
