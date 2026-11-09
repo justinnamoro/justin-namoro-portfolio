@@ -311,7 +311,7 @@ export default function IndexNavbar() {
         <i className="fas fa-home" aria-hidden="true" />
       </button>
       <button type="button" aria-current={activeProject === "graphic-design-communications" ? "location" : undefined} onClick={() => scrollToProject("graphic-design-communications")}>
-        Graphic Design
+        Graphics & Comms
       </button>
       <button type="button" aria-current={activeProject === "web-migration-cms" ? "location" : undefined} onClick={() => scrollToProject("web-migration-cms")}>
         Migration &amp; CMS
