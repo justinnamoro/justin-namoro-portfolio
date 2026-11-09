@@ -63,7 +63,24 @@ const MobileBottomNav = styled.nav`
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 4px;
+      width: calc((100% - 8px) / 5);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+      transform: translateX(calc(var(--active-index, 0) * 100%));
+      transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+
     button {
+      position: relative;
+      z-index: 1;
       flex: 1;
       min-width: 0;
       padding: 6px 2px;
@@ -80,8 +97,14 @@ const MobileBottomNav = styled.nav`
     }
 
     button[aria-current="location"] {
-      background: rgba(255, 255, 255, 0.16);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+      background: transparent;
+      box-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        transition: none;
+      }
     }
   }
 `;
@@ -317,7 +340,7 @@ export default function IndexNavbar() {
         </Collapse>
       </Container>
     </Navbar>
-    {(location.pathname === "/" || location.pathname === "") && <MobileBottomNav aria-label="Project sections">
+    {(location.pathname === "/" || location.pathname === "") && <MobileBottomNav aria-label="Project sections" style={{ "--active-index": Math.max(0, ["", "graphic-design-communications", "web-migration-cms", "short-film", "web-dev-ui-ux"].indexOf(activeProject)) }}>
       <button type="button" aria-label="Back to top" aria-current={activeProject === "" ? "location" : undefined} onClick={() => { setActiveProject(""); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
         <i className="fas fa-home" aria-hidden="true" />
       </button>
